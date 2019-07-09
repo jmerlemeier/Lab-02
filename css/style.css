@@ -1,0 +1,15 @@
+* {
+  background: rgb(194, 182, 194)
+}
+
+ol {
+  color: blue;
+}
+
+ul li a{
+  background-color: pink;
+}
+
+.teal {
+  color: teal;
+}
