@@ -1,7 +1,11 @@
 "use strict";
 
+//Username prompt
+var userName = prompt('Welcome to Julie\'s \'About Me\' page. What is your name?');
+  alert('Hello, ' + userName + '! Let\'s play a guessing game to get to know Julie a little better.');
+
 //Question 1
-var harpAge = prompt("Welcome to Julie E's 'About Me' page. There are 5 questions about Julie for you to guess the answers to. First, Did you know Julie started playing the harp at 4-years-old?");
+var harpAge = prompt("First, Did you know Julie started playing the harp at 4-years-old?");
 
 //convert to lowercase
 harpAge.toLowerCase();
@@ -9,98 +13,121 @@ harpAge.toLowerCase();
 //yes user input
 if(harpAge === 'yes' || harpAge === 'y') {
   alert('You did? You must know her very well.');
-} else {
-  harpAge.toUpperCase();
-  if(harpAge === 'YES' || harpAge === 'Y') {
-    alert('You did? You must know her very well.');
-  } else {
-    //nothing here
-  }
-}
-
-// No user input
-if(harpAge === 'no' || harpAge === 'n') {
+} else if(harpAge === 'no' || harpAge === 'n') {
   alert('You did not? That is ok. She was 4-years-old back in 1993.');
-} else {
-  harpAge.toUpperCase();
-  if(harpAge === 'NO' || harpAge === 'N') {
-    alert('You did not? That is ok. She was 4-years-old back in 1993.');
   } else {
-    //nothing here
+   alert('Invalid entry.');
   }
-}
 
-    //console log Q1
-    console.log('User\'s response to Question 1: ' + harpAge);
+//console log Q1
+  console.log('User\'s response to Question 1: ' + harpAge);
+
+// ------------------------------------
 
 //Question 2
-var grewupMinn = prompt("Julie grew up shoveling snow in the Great White North. Did you know that is one nickname for Minnesota?");
+var grewupMinn = prompt('Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
 
 //convert to lowercase
 grewupMinn.toLowerCase();
 
 //yes user input
 if(grewupMinn === 'yes' || grewupMinn === 'y') {
-  alert('Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda.');
-} else {
-  grewupMinn.toUpperCase();
-  if(grewupMinn === 'YES' || grewupMinn === 'Y') {
-    alert('Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda.');
-  } else {
-    //nothing here
-  }
-}
-
-// No user input
-if(grewupMinn === 'no' || grewupMinn === 'n') {
-  alert('No? Another name for the state is the "Mini Soda."');
-} else {
-  grewupMinn.toUpperCase();
-  if(grewupMinn === 'NO' || grewupMinn === 'N') {
+  alert('Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda."');
+} else if(grewupMinn === 'no' || grewupMinn === 'n') {
     alert('No? Another name for the state is the "Mini Soda."');
   } else {
-    //nothing here
+    alert('Invalid entry.');
   }
-}
 
-    //console log Q1
+    //console log Q2
     console.log('User\'s response to Question 2: ' + grewupMinn);
 
+    // ------------------------------------
+
 //Question 3
-var bakingFun = prompt("Baking");
+var bakingFun = prompt("Do you know what Babka is?");
 
 //convert to lowercase
 bakingFun.toLowerCase();
 
 //yes user input
 if(bakingFun === 'yes' || bakingFun === 'y') {
-  alert('You did? You must know her very well.');
-} else {
-  bakingFun.toUpperCase();
-  if(bakingFun === 'YES' || bakingFun === 'Y') {
-    alert('You did? You must know her very well.');
+  alert('It is delicious, isn\'t it? What a delicious cinnamon sweet bread.');
+} else if(bakingFun === 'no' || bakingFun === 'n') {
+    alert('It is a delicious cinnamon sweet bread that is rolled and twisted and baked in a bread pan.');
   } else {
-    //nothing here
+    alert('Invalid entry.');
+  }
+    //console log Q1
+    console.log('User\'s response to Question 3: ' + bakingFun);
+
+// ------------------------------------
+
+//Question 4
+var wildCat = prompt("Julie loves wild cats like jaguars, cougars, and snow leopards. She even visited the Wild Felid Advocacy Center on Harstine Island by Shelton, WA. Do you want to visit that place, too?");
+
+//convert to lowercase
+wildCat.toLowerCase();
+
+//yes user input
+if(wildCat === 'yes' || wildCat === 'y') {
+  alert('Great. Here is the address: 3111 E Harstine Island Rd N, Shelton, WA 98584');
+} else {
+  wildCat.toUpperCase();
+  if(wildCat === 'YES' || wildCat === 'Y') {
+    alert('Great. Here is the address: 3111 E Harstine Island Rd N, Shelton, WA 98584');
+  } else {
+    //no action
   }
 }
 
 // No user input
-if(bakingFun === 'no' || bakingFun === 'n') {
-  alert('You did not? That is ok. ');
+if(wildCat === 'no' || wildCat === 'n') {
+  alert('Ok, maybe some other time.');
 } else {
-  bakingFun.toUpperCase();
-  if(bakingFun === 'NO' || bakingFun === 'N') {
-    alert('You did not? That is ok.');
+  wildCat.toUpperCase();
+  if(wildCat === 'NO' || wildCat === 'N') {
+    alert('Ok, maybe some other time.');
   } else {
-    //nothing here
+    
   }
 }
 
     //console log Q1
-    console.log('User\'s response to Question 3: ' + bakingFun);
+    console.log('User\'s response to Question 4: ' + wildCat);
 
-//Question 4
+// ------------------------------------
 
 //Question 5
+var yogaTrain = prompt('Do you think Julie learned to teach yoga in Kathmandu?');
 
+//convert to lowercase
+yogaTrain.toLowerCase();
+
+//yes user input
+if(yogaTrain === 'yes' || yogaTrain === 'y') {
+  alert('Nah, she tricked ya. She trained at a lovely studio in North Seattle in 2011.');
+} else {
+  yogaTrain.toUpperCase();
+  if(yogaTrain === 'YES' || yogaTrain === 'Y') {
+    alert('Nah, she tricked ya. She trained at a lovely studio in North Seattle in 2011.');
+  } else {
+    //no action
+  }
+}
+
+// No user input
+if(yogaTrain === 'no' || yogaTrain === 'n') {
+  alert('She wishes! Nepal is where she wants to backpack for her thrid solo backpacking trip. She trained at a lovely studio in North Seattle in 2011.');
+} else {
+  yogaTrain.toUpperCase();
+  if(yogaTrain === 'NO' || yogaTrain === 'N') {
+    alert('She wishes! Nepal is where she wants to backpack for her thrid solo backpacking trip. She trained at a lovely studio in North Seattle in 2011.');
+  } else {
+   //no action
+  }
+}
+
+    //console log Q1
+    console.log('User\'s response to Question 5: ' + yogaTrain);
 
