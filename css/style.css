@@ -1,5 +1,6 @@
-* {
-  background: rgb(194, 182, 194)
+body {
+  background: url(lighthouse.jpg);
+  background-size: 100%
 }
 
 ol {
@@ -12,4 +13,10 @@ ul li a{
 
 .teal {
   color: teal;
+}
+
+.intro {
+  color: black;
+  background-color: azure;
+  margin: 50px, 75px
 }
