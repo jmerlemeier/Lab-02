@@ -8,7 +8,7 @@ var userName = prompt('Welcome to Julie\'s \'About Me\' page. What is your name?
 var harpAge = prompt("First, Did you know Julie started playing the harp at 4-years-old?");
 
 //convert to lowercase
-harpAge.toLowerCase();
+harpAge = harpAge.toLowerCase();
 
 //yes user input
 if(harpAge === 'yes' || harpAge === 'y') {
@@ -28,7 +28,7 @@ if(harpAge === 'yes' || harpAge === 'y') {
 var grewupMinn = prompt('Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
 
 //convert to lowercase
-grewupMinn.toLowerCase();
+grewupMinn = grewupMinn.toLowerCase();
 
 //yes user input
 if(grewupMinn === 'yes' || grewupMinn === 'y') {
@@ -48,7 +48,7 @@ if(grewupMinn === 'yes' || grewupMinn === 'y') {
 var bakingFun = prompt("Do you know what Babka is?");
 
 //convert to lowercase
-bakingFun.toLowerCase();
+bakingFun = bakingFun.toLowerCase();
 
 //yes user input
 if(bakingFun === 'yes' || bakingFun === 'y') {
@@ -67,31 +67,16 @@ if(bakingFun === 'yes' || bakingFun === 'y') {
 var wildCat = prompt("Julie loves wild cats like jaguars, cougars, and snow leopards. She even visited the Wild Felid Advocacy Center on Harstine Island by Shelton, WA. Do you want to visit that place, too?");
 
 //convert to lowercase
-wildCat.toLowerCase();
+wildCat = wildCat.toLowerCase();
 
 //yes user input
 if(wildCat === 'yes' || wildCat === 'y') {
   alert('Great. Here is the address: 3111 E Harstine Island Rd N, Shelton, WA 98584');
-} else {
-  wildCat.toUpperCase();
-  if(wildCat === 'YES' || wildCat === 'Y') {
-    alert('Great. Here is the address: 3111 E Harstine Island Rd N, Shelton, WA 98584');
-  } else {
-    //no action
-  }
-}
-
-// No user input
-if(wildCat === 'no' || wildCat === 'n') {
-  alert('Ok, maybe some other time.');
-} else {
-  wildCat.toUpperCase();
-  if(wildCat === 'NO' || wildCat === 'N') {
+} else if (wildCat === 'no' || wildCat === 'n') {
     alert('Ok, maybe some other time.');
   } else {
-    
+    alert('Invalid entry.');
   }
-}
 
     //console log Q1
     console.log('User\'s response to Question 4: ' + wildCat);
@@ -102,32 +87,16 @@ if(wildCat === 'no' || wildCat === 'n') {
 var yogaTrain = prompt('Do you think Julie learned to teach yoga in Kathmandu?');
 
 //convert to lowercase
-yogaTrain.toLowerCase();
+yogaTrain = yogaTrain.toUpperCase();
 
 //yes user input
-if(yogaTrain === 'yes' || yogaTrain === 'y') {
+if(yogaTrain === 'YES' || yogaTrain === 'Y') {
   alert('Nah, she tricked ya. She trained at a lovely studio in North Seattle in 2011.');
-} else {
-  yogaTrain.toUpperCase();
-  if(yogaTrain === 'YES' || yogaTrain === 'Y') {
-    alert('Nah, she tricked ya. She trained at a lovely studio in North Seattle in 2011.');
-  } else {
-    //no action
+} else if (yogaTrain === 'NO' || yogaTrain === 'N') {
+   alert ('She wishes! Nepal is where she wants to backpack for her thrid solo backpacking trip. She trained at a lovely studio in North Seattle in 2011.');
+}   else {
+     alert('Invalid entry.');
   }
-}
-
-// No user input
-if(yogaTrain === 'no' || yogaTrain === 'n') {
-  alert('She wishes! Nepal is where she wants to backpack for her thrid solo backpacking trip. She trained at a lovely studio in North Seattle in 2011.');
-} else {
-  yogaTrain.toUpperCase();
-  if(yogaTrain === 'NO' || yogaTrain === 'N') {
-    alert('She wishes! Nepal is where she wants to backpack for her thrid solo backpacking trip. She trained at a lovely studio in North Seattle in 2011.');
-  } else {
-   //no action
-  }
-}
-
     //console log Q1
     console.log('User\'s response to Question 5: ' + yogaTrain);
 
