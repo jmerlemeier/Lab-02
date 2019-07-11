@@ -9,8 +9,9 @@ alert('Hello, ' + userName + '! Let\'s play a guessing game to get to know Julie
 
 //---------------------------Function Section-------------------//
 
+
+//Question 1
 function question1(ans1, ans2){
-  //Question 1
   var harpAge = prompt("First, Did you know Julie started playing the harp at 4-years-old?");
 
   //convert to lowercase
@@ -30,36 +31,40 @@ function question1(ans1, ans2){
       break;
 
     } else {
-      alert('Invalid entry.');
-      harpAge = prompt("First, Did you know Julie started playing the harp at 4-years-old?");
+      harpAge = prompt("Invalid entry, please use yes or no. Did you know Julie started playing the harp at 4-years-old?");
+      harpAge = harpAge.toLowerCase();
       console.log('The new harpAge is '+harpAge);
     }
   }   
 }
 
+// //Question 2
+function question2(ans1, ans2){
+  var grewupMinn = prompt('Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
+  //convert to lowercase
+  grewupMinn = grewupMinn.toLowerCase();
+  console.log('The grewupMinn var is '+grewupMinn);
 
-// // // ------------------------------------
+  //the only way to escape the loop is to put in valid input
+  while(true){
+    if(grewupMinn === ans1 || grewupMinn === ans2) {
+      alert('Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda."');
+      scorecard += 1;
+      break;
 
-// // //Question 2
-// var grewupMinn = prompt('Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
+    } else if(grewupMinn === 'no' || grewupMinn === 'n') {
+      alert('No? Another name for the state is the "Mini Soda."');
+      break;
 
-// //convert to lowercase
-// grewupMinn = grewupMinn.toLowerCase();
+    } else {
+      grewupMinn = prompt('Invalid entry, please use yes or no. Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
+      grewupMinn = grewupMinn.toLowerCase();
+      console.log('The new grewupMinn var is '+grewupMinn);
+    }
+  }
+}
 
-// //yes user input
-// if(grewupMinn === 'yes' || grewupMinn === 'y') {
-//   alert('Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda."');
-//   scorecard += 1;
-// } else if(grewupMinn === 'no' || grewupMinn === 'n') {
-//     alert('No? Another name for the state is the "Mini Soda."');
-//   } else {
-//     alert('Invalid entry.');
-//   }
-
-//     //console log Q2
-//     console.log('User\'s response to Question 2: ' + grewupMinn);
-
-// //     // ------------------------------------
+//     // ------------------------------------
 
 // // //Question 3
 // var bakingFun = prompt("Do you know what Babka is?");
@@ -179,4 +184,5 @@ function question1(ans1, ans2){
 // console.log('The scorecard is: ' + scorecard);
 
 //----------------Executasdfaable? Code--------------//
-question1('yes','y');
+//question1('yes','y');
+question2('yes', 'y');
