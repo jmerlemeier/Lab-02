@@ -161,8 +161,11 @@ console.log('User\'s response to Question 7: ' + theAnswer);
 
 // ------------------------------------
 
-//Counter Display. You could replace current: getelementbyID and textContent
+//Scorecard Display. You could replace current: getelementbyID and textContent
 
 document.write(scorecard);
 console.log('The scorecard is: ' + scorecard);
+
+//Counter for Fav
+
 
