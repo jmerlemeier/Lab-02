@@ -9,64 +9,7 @@ alert('Hello, ' + userName + '! Let\'s play a guessing game to get to know Julie
 
 //---------------------------Function Section-------------------//
 
-
-//Question 1
-function question1(ans1, ans2){
-  var harpAge = prompt("First, Did you know Julie started playing the harp at 4-years-old?");
-
-  //convert to lowercase
-  harpAge = harpAge.toLowerCase();
-
-  //The only way to escape the loop is to have valid input
-  while(true){
-
-    console.log('The harpAge var is '+harpAge)
-    if(harpAge === ans1 || harpAge === ans2) {
-      alert('You did? You must know her very well.');
-      scorecard++;
-      break;
-
-    } else if(harpAge === 'no' || harpAge === 'n') {
-      alert('You did not? That is ok. She was 4-years-old back in 1993.');
-      break;
-
-    } else {
-      harpAge = prompt("Invalid entry, please use yes or no. Did you know Julie started playing the harp at 4-years-old?");
-      harpAge = harpAge.toLowerCase();
-      console.log('The new harpAge is '+harpAge);
-    }
-  }   
-}
-
-// // //Question 2
-// function question2(ans1, ans2, neg1, neg2, question){
-//   var grewupMinn = prompt(question);
-//   //convert to lowercase
-//   grewupMinn = grewupMinn.toLowerCase();
-//   console.log('The grewupMinn var is '+grewupMinn);
-
-//   //the only way to escape the loop is to put in valid input
-//   while(true){
-//     if(grewupMinn === ans1 || grewupMinn === ans2) {
-//       alert('Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda."');
-//       scorecard++;
-//       break;
-
-//     } else if(grewupMinn === neg1 || grewupMinn === neg2) {
-//       alert('No? Another name for the state is the "Mini Soda."');
-//       break;
-
-//     } else {
-//       grewupMinn = prompt('Invalid entry, please use yes or no. '+question);
-//       grewupMinn = grewupMinn.toLowerCase();
-//       console.log('The new grewupMinn var is '+grewupMinn);
-//     }
-//   }
-// }
-
-// ------------------------------------
-
-// Generic Question Prompt works for 3, 4, 5
+// Generic Question Prompt works for 1, 2, 3, 4, 5
 function bigQuestion(ans1, ans2, neg1, neg2, question, ifTrue, ifFalse){
   var bakingFun = prompt(question);
   //convert to lowercase
@@ -156,7 +99,8 @@ function question7(sweetArray, amountOfGuesses){
 
 
 //----------------Executasdfaable? Code--------------//
-question1('yes','y');
+//question 1
+bigQuestion('yes','y', 'no', 'n', "First, Did you know Julie started playing the harp at 4-years-old?", 'You did? You must know her very well.', 'You did not? That is ok. She was 4-years-old back in 1993.');
 
 //question 2
 bigQuestion('yes', 'y', 'no', 'n', 'Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?', 'Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda."', 'No? Another name for the state is the "Mini Soda."');
