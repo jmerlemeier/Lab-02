@@ -67,27 +67,27 @@ function question2(ans1, ans2, neg1, neg2, question){
 //     // ------------------------------------
 
 // //Question 3
-function question3(ans1, ans2, neg1, neg2, question){
+function bigQuestion(ans1, ans2, neg1, neg2, question, ifTrue, ifFalse){
   var bakingFun = prompt(question);
   //convert to lowercase
   bakingFun = bakingFun.toLowerCase();
-  console.log('The bakingFun var is '+bakingFun)
+  console.log('The var is '+bakingFun+' for question '+question)
   
   //the only way to escape the loop is to have good input
   while(true){
     if(bakingFun === ans1 || bakingFun === ans2) {
-      alert('It is delicious, isn\'t it? What a delicious cinnamon sweet bread.');
+      alert(ifTrue);
       scorecard++;
       break;
 
     } else if(bakingFun === neg1 || bakingFun === neg2) {
-      alert('It is a delicious cinnamon sweet bread that is rolled and twisted and baked in a bread pan.');
+      alert(ifFalse);
       break;
 
     } else {
       bakingFun = prompt("Invalid input, please use yes or no. " + question);
       bakingFun = bakingFun.toLowerCase();
-      console.log('The new bakingFun var is '+bakingFun);
+      console.log('The new var is '+bakingFun);
     }
   }
 }
@@ -95,27 +95,30 @@ function question3(ans1, ans2, neg1, neg2, question){
 // // ------------------------------------
 
 // // //Question 4
-// var wildCat = prompt("Julie loves wild cats like jaguars, cougars, and snow leopards. She even visited the Wild Felid Advocacy Center on Harstine Island by Shelton, WA. Do you want to visit that place, too?");
+// function question4(ans1, ans2, neg1, neg2, question){
 
-// //convert to lowercase
-// wildCat = wildCat.toLowerCase();
-
-// //yes user input
-// if(wildCat === 'yes' || wildCat === 'y') {
-//   alert('Great. Here is the address: 3111 E Harstine Island Rd N, Shelton, WA 98584');
-//   scorecard += 1;
-// } else if (wildCat === 'no' || wildCat === 'n') {
-//     alert('Ok, maybe some other time.');
-//   } else {
-//     alert('Invalid entry.');
-//   }
-
-//     //console log Q1
-//     console.log('User\'s response to Question 4: ' + wildCat);
+//   var wildCat = prompt("Julie loves wild cats like jaguars, cougars, and snow leopards. She even visited the Wild Felid Advocacy Center on Harstine Island by Shelton, WA. Do you want to visit that place, too?");
+  
+//   //convert to lowercase
+//   wildCat = wildCat.toLowerCase();
+  
+//   //yes user input
+//   if(wildCat === 'yes' || wildCat === 'y') {
+//     alert('Great. Here is the address: 3111 E Harstine Island Rd N, Shelton, WA 98584');
+//     scorecard += 1;
+//   } else if (wildCat === 'no' || wildCat === 'n') {
+//       alert('Ok, maybe some other time.');
+//     } else {
+//       alert('Invalid entry.');
+//     }
+  
+//       //console log Q1
+//       console.log('User\'s response to Question 4: ' + wildCat);
+// }
 
 // // // ------------------------------------
 
-// // //Question 5
+// //Question 5
 // var yogaTrain = prompt('Do you think Julie learned to teach yoga in Kathmandu?');
 
 // //convert to lowercase
@@ -189,9 +192,15 @@ function question3(ans1, ans2, neg1, neg2, question){
 // //Counter Display. You could replace current: getelementbyID and textContent
 
 // document.write(scorecard);
-// console.log('The scorecard is: ' + scorecard);
+
 
 //----------------Executasdfaable? Code--------------//
-//question1('yes','y');
-question2('yes', 'y', 'no', 'n', 'Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
-question3('yes', 'y', 'no', 'n', "Do you know what Babka is?");
+question1('yes','y');
+//question2('yes', 'y', 'no', 'n', 'Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
+//question3('yes', 'y', 'no', 'n', "Do you know what Babka is?", 'It is delicious, isn\'t it? What a delicious cinnamon sweet bread.', 'It is a delicious cinnamon sweet bread that is rolled and twisted and baked in a bread pan.');
+// //question 4
+//question3('yes', 'y', 'no', 'n', "Julie loves wild cats like jaguars, cougars, and snow leopards. She even visited the Wild Felid Advocacy Center on Harstine Island by //Shelton, WA. Do you want to visit that place, too?", 'Great. Here is the address: 3111 E Harstine Island Rd N, Shelton, WA 98584', 'Ok, maybe some other time.')
+// //actually question 5 yes and no are swapped because the no answer increases the score.
+bigQuestion('no', 'n', 'yes', 'y', 'Do you think Julie learned to teach yoga in Kathmandu?', 'She wishes! Nepal is where she wants to backpack for her third solo backpacking trip. She trained at a lovely studio in North Seattle in 2011.', 'Nah, she tricked ya. She trained at a lovely studio in North Seattle in 2011.')
+
+console.log('The scorecard is: ' + scorecard);
