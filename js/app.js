@@ -23,7 +23,7 @@ function question1(ans1, ans2){
     console.log('The harpAge var is '+harpAge)
     if(harpAge === ans1 || harpAge === ans2) {
       alert('You did? You must know her very well.');
-      scorecard += 1;
+      scorecard++;
       break;
 
     } else if(harpAge === 'no' || harpAge === 'n') {
@@ -39,8 +39,8 @@ function question1(ans1, ans2){
 }
 
 // //Question 2
-function question2(ans1, ans2){
-  var grewupMinn = prompt('Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
+function question2(ans1, ans2, neg1, neg2, question){
+  var grewupMinn = prompt(question);
   //convert to lowercase
   grewupMinn = grewupMinn.toLowerCase();
   console.log('The grewupMinn var is '+grewupMinn);
@@ -49,15 +49,15 @@ function question2(ans1, ans2){
   while(true){
     if(grewupMinn === ans1 || grewupMinn === ans2) {
       alert('Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda."');
-      scorecard += 1;
+      scorecard++;
       break;
 
-    } else if(grewupMinn === 'no' || grewupMinn === 'n') {
+    } else if(grewupMinn === neg1 || grewupMinn === neg2) {
       alert('No? Another name for the state is the "Mini Soda."');
       break;
 
     } else {
-      grewupMinn = prompt('Invalid entry, please use yes or no. Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
+      grewupMinn = prompt('Invalid entry, please use yes or no. '+question);
       grewupMinn = grewupMinn.toLowerCase();
       console.log('The new grewupMinn var is '+grewupMinn);
     }
@@ -66,25 +66,33 @@ function question2(ans1, ans2){
 
 //     // ------------------------------------
 
-// // //Question 3
-// var bakingFun = prompt("Do you know what Babka is?");
+// //Question 3
+function question3(ans1, ans2, neg1, neg2, question){
+  var bakingFun = prompt(question);
+  //convert to lowercase
+  bakingFun = bakingFun.toLowerCase();
+  console.log('The bakingFun var is '+bakingFun)
+  
+  //the only way to escape the loop is to have good input
+  while(true){
+    if(bakingFun === ans1 || bakingFun === ans2) {
+      alert('It is delicious, isn\'t it? What a delicious cinnamon sweet bread.');
+      scorecard++;
+      break;
 
-// //convert to lowercase
-// bakingFun = bakingFun.toLowerCase();
+    } else if(bakingFun === neg1 || bakingFun === neg2) {
+      alert('It is a delicious cinnamon sweet bread that is rolled and twisted and baked in a bread pan.');
+      break;
 
-// //yes user input
-// if(bakingFun === 'yes' || bakingFun === 'y') {
-//   alert('It is delicious, isn\'t it? What a delicious cinnamon sweet bread.');
-//   scorecard += 1;
-// } else if(bakingFun === 'no' || bakingFun === 'n') {
-//     alert('It is a delicious cinnamon sweet bread that is rolled and twisted and baked in a bread pan.');
-//   } else {
-//     alert('Invalid entry.');
-//   }
-//     //console log Q1
-//     console.log('User\'s response to Question 3: ' + bakingFun);
+    } else {
+      bakingFun = prompt("Invalid input, please use yes or no. " + question);
+      bakingFun = bakingFun.toLowerCase();
+      console.log('The new bakingFun var is '+bakingFun);
+    }
+  }
+}
 
-// // // ------------------------------------
+// // ------------------------------------
 
 // // //Question 4
 // var wildCat = prompt("Julie loves wild cats like jaguars, cougars, and snow leopards. She even visited the Wild Felid Advocacy Center on Harstine Island by Shelton, WA. Do you want to visit that place, too?");
@@ -185,4 +193,5 @@ function question2(ans1, ans2){
 
 //----------------Executasdfaable? Code--------------//
 //question1('yes','y');
-question2('yes', 'y');
+question2('yes', 'y', 'no', 'n', 'Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
+question3('yes', 'y', 'no', 'n', "Do you know what Babka is?");
