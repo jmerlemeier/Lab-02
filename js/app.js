@@ -38,35 +38,35 @@ function question1(ans1, ans2){
   }   
 }
 
-// //Question 2
-function question2(ans1, ans2, neg1, neg2, question){
-  var grewupMinn = prompt(question);
-  //convert to lowercase
-  grewupMinn = grewupMinn.toLowerCase();
-  console.log('The grewupMinn var is '+grewupMinn);
+// // //Question 2
+// function question2(ans1, ans2, neg1, neg2, question){
+//   var grewupMinn = prompt(question);
+//   //convert to lowercase
+//   grewupMinn = grewupMinn.toLowerCase();
+//   console.log('The grewupMinn var is '+grewupMinn);
 
-  //the only way to escape the loop is to put in valid input
-  while(true){
-    if(grewupMinn === ans1 || grewupMinn === ans2) {
-      alert('Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda."');
-      scorecard++;
-      break;
+//   //the only way to escape the loop is to put in valid input
+//   while(true){
+//     if(grewupMinn === ans1 || grewupMinn === ans2) {
+//       alert('Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda."');
+//       scorecard++;
+//       break;
 
-    } else if(grewupMinn === neg1 || grewupMinn === neg2) {
-      alert('No? Another name for the state is the "Mini Soda."');
-      break;
+//     } else if(grewupMinn === neg1 || grewupMinn === neg2) {
+//       alert('No? Another name for the state is the "Mini Soda."');
+//       break;
 
-    } else {
-      grewupMinn = prompt('Invalid entry, please use yes or no. '+question);
-      grewupMinn = grewupMinn.toLowerCase();
-      console.log('The new grewupMinn var is '+grewupMinn);
-    }
-  }
-}
+//     } else {
+//       grewupMinn = prompt('Invalid entry, please use yes or no. '+question);
+//       grewupMinn = grewupMinn.toLowerCase();
+//       console.log('The new grewupMinn var is '+grewupMinn);
+//     }
+//   }
+// }
 
 // ------------------------------------
 
-// Generic Question Prompt
+// Generic Question Prompt works for 3, 4, 5
 function bigQuestion(ans1, ans2, neg1, neg2, question, ifTrue, ifFalse){
   var bakingFun = prompt(question);
   //convert to lowercase
@@ -91,50 +91,6 @@ function bigQuestion(ans1, ans2, neg1, neg2, question, ifTrue, ifFalse){
     }
   }
 }
-
-// // ------------------------------------
-
-// // //Question 4
-// function question4(ans1, ans2, neg1, neg2, question){
-
-//   var wildCat = prompt("Julie loves wild cats like jaguars, cougars, and snow leopards. She even visited the Wild Felid Advocacy Center on Harstine Island by Shelton, WA. Do you want to visit that place, too?");
-  
-//   //convert to lowercase
-//   wildCat = wildCat.toLowerCase();
-  
-//   //yes user input
-//   if(wildCat === 'yes' || wildCat === 'y') {
-//     alert('Great. Here is the address: 3111 E Harstine Island Rd N, Shelton, WA 98584');
-//     scorecard += 1;
-//   } else if (wildCat === 'no' || wildCat === 'n') {
-//       alert('Ok, maybe some other time.');
-//     } else {
-//       alert('Invalid entry.');
-//     }
-  
-//       //console log Q1
-//       console.log('User\'s response to Question 4: ' + wildCat);
-// }
-
-// // // ------------------------------------
-
-// //Question 5
-// var yogaTrain = prompt('Do you think Julie learned to teach yoga in Kathmandu?');
-
-// //convert to lowercase
-// yogaTrain = yogaTrain.toUpperCase();
-
-// //yes user input
-// if(yogaTrain === 'YES' || yogaTrain === 'Y') {
-//   alert('Nah, she tricked ya. She trained at a lovely studio in North Seattle in 2011.');
-// } else if (yogaTrain === 'NO' || yogaTrain === 'N') {
-//    alert ('She wishes! Nepal is where she wants to backpack for her third solo backpacking trip. She trained at a lovely studio in North Seattle in 2011.');
-//    scorecard += 1;
-// }   else {
-//      alert('Invalid entry.');
-//   }
-// //console log 
-//     console.log('User\'s response to Question 5: ' + yogaTrain);
 
 // // ------------------------------------
 
@@ -201,7 +157,9 @@ function question7(sweetArray, amountOfGuesses){
 
 //----------------Executasdfaable? Code--------------//
 question1('yes','y');
-question2('yes', 'y', 'no', 'n', 'Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
+
+//question 2
+bigQuestion('yes', 'y', 'no', 'n', 'Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?', 'Isn\'t Minnesota trivia the best? Another name for the state is the "Mini Soda."', 'No? Another name for the state is the "Mini Soda."');
 
 //question 3
 bigQuestion('yes', 'y', 'no', 'n', "Do you know what Babka is?", 'It is delicious, isn\'t it? What a delicious cinnamon sweet bread.', 'It is a delicious cinnamon sweet bread that is rolled and twisted and baked in a bread pan.');
