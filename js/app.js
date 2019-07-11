@@ -158,33 +158,39 @@ function question6(promptInput, answer){
   }
 }
 
-// // ------------------------------------
-// //Question 7
+// ------------------------------------
+//Question 7
+function question7(sweetArray, amountOfGuesses){
+  // define variables
+  var escape = false;
+  var numGuesses = 0;
 
-// // define variables
-// var sweetArray = ['twix', 'cookies', 'brownies', 'DQ Ice Cream Cake', 'gummy worms', 'peanut m&ms'];
-// var escape = false;
-// var numGuesses = 0;
-// // while loop
-// while(escape === false && numGuesses < 6){
-//   var theAnswer = prompt('Guess some of my favorite sweets.');
-//     for(var i = 0; i < sweetArray.length; i++){
-//       if(theAnswer === sweetArray[i]){
-//         console.log('Inside for statement');
-//         alert('Yay!');
-//         scorecard += 1;
-//         escape = true;
-//         break;
-//       } 
-//     }
-//     numGuesses++;
-// }  
-// // Possible Answers
+  // while loop
+  while(escape === false && numGuesses < amountOfGuesses){
+    var theAnswer = prompt('Guess some of my favorite sweets.');
 
-// document.write(sweetArray);
-
-// //console log 
-// console.log('User\'s response to Question 7: ' + theAnswer);
+    for(var i = 0; i < sweetArray.length; i++){
+      if(theAnswer === sweetArray[i]){
+        console.log('Inside for statement');
+        alert('Yay!');
+        scorecard++;
+        escape = true;
+        break;
+      } 
+    }
+    if(escape === false){
+      alert('You are a dummy. This is set in stone and cannot be changed. Ever. Forever. The end.')
+    }
+    numGuesses++;
+    console.log(numGuesses)
+  }  
+  // Possible Answers
+  
+  document.write(sweetArray);
+  
+  //console log 
+  console.log('User\'s response to Question 7: ' + theAnswer);
+}
 
 // // ------------------------------------
 
@@ -194,20 +200,22 @@ function question6(promptInput, answer){
 
 
 //----------------Executasdfaable? Code--------------//
-// question1('yes','y');
-// //question2('yes', 'y', 'no', 'n', 'Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
+question1('yes','y');
+question2('yes', 'y', 'no', 'n', 'Julie grew up shoveling snow in the "Great White North". Did you know that is one nickname for Minnesota?');
 
-// //question 3
-// bigQuestion('yes', 'y', 'no', 'n', "Do you know what Babka is?", 'It is delicious, isn\'t it? What a delicious cinnamon sweet bread.', 'It is a delicious cinnamon sweet bread that is rolled and twisted and baked in a bread pan.');
+//question 3
+bigQuestion('yes', 'y', 'no', 'n', "Do you know what Babka is?", 'It is delicious, isn\'t it? What a delicious cinnamon sweet bread.', 'It is a delicious cinnamon sweet bread that is rolled and twisted and baked in a bread pan.');
 
-// //question 4
-// bigQuestion('yes', 'y', 'no', 'n', "Julie loves wild cats like jaguars, cougars, and snow leopards. She even visited the Wild Felid Advocacy Center on Harstine Island by //Shelton, WA. Do you want to visit that place, too?", 'Great. Here is the address: 3111 E Harstine Island Rd N, Shelton, WA 98584', 'Ok, maybe some other time.');
+//question 4
+bigQuestion('yes', 'y', 'no', 'n', "Julie loves wild cats like jaguars, cougars, and snow leopards. She even visited the Wild Felid Advocacy Center on Harstine Island by //Shelton, WA. Do you want to visit that place, too?", 'Great. Here is the address: 3111 E Harstine Island Rd N, Shelton, WA 98584', 'Ok, maybe some other time.');
 
-// //question 5 yes and no are swapped because the no answer increases the score.
-// bigQuestion('no', 'n', 'yes', 'y', 'Do you think Julie learned to teach yoga in Kathmandu?', 'She wishes! Nepal is where she wants to backpack for her third solo backpacking trip. She trained at a lovely studio in North Seattle in 2011.', 'Nah, she tricked ya. She trained at a lovely studio in North Seattle in 2011.');
+//question 5 yes and no are swapped because the no answer increases the score.
+bigQuestion('no', 'n', 'yes', 'y', 'Do you think Julie learned to teach yoga in Kathmandu?', 'She wishes! Nepal is where she wants to backpack for her third solo backpacking trip. She trained at a lovely studio in North Seattle in 2011.', 'Nah, she tricked ya. She trained at a lovely studio in North Seattle in 2011.');
 
 //question 6
 question6('Guess how many times have I been to France:  ', 3);
 
+//question 7
+question7(['twix', 'cookies', 'brownies', 'DQ Ice Cream Cake', 'gummy worms', 'peanut m&ms'], 6);
 
 console.log('The scorecard is: ' + scorecard);
