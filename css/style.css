@@ -1,23 +1,37 @@
 body {
-  background: url(lighthouse.jpg);
+  background: url(bluehexagon.jpg);
   background-size: 100%
-  
 }
 
-ol {
-  color: blue;
-}
+h1 {
+  color: black;
+  font-size: 400%;
+  font-family: Arial;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  border: solid 10px white;
+  padding: ;
+  margin: 30px;
 
-ul li a{
-  background-color: pink;
-}
-
-.teal {
-  color: teal;
 }
 
 .intro {
   color: black;
-  background-color: azure;
-  margin: 50px, 75px
+  background: url(blush.jpg);
+  border: solid 5px white;
+  padding: 50px;
+  margin: 200px, 50px, 100px, 800px;
+}
+
+.answers {
+
+}
+
+ol {
+  color: white;
+}
+
+ul li a{
+  background-color: pink;
 }
