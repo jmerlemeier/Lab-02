@@ -11,9 +11,8 @@ h1 {
   letter-spacing: 0.2em;
   text-align: center;
   border: solid 10px white;
-  padding: ;
+  padding: 1em;
   margin: 30px;
-
 }
 
 .intro {
@@ -24,14 +23,18 @@ h1 {
   margin: 200px, 50px, 100px, 800px;
 }
 
-.answers {
-
+h2 {
+  padding: 0.5em;
+  font-size: 3em;
 }
 
 ol {
   color: white;
+  padding: 1em;
+  line-height: 2em;
 }
 
-ul li a{
-  background-color: pink;
+ol li{
+  background-color: rgba(136, 128, 128, 0.486);
+  display: inline-block;
 }
