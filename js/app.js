@@ -78,7 +78,7 @@ function question7(sweetArray, amountOfGuesses){
       } 
     }
     if(escape === false){
-      alert('You are a dummy. This is set in stone and cannot be changed. Ever. Forever. The end.')
+      alert('Nope, try cookies.')
     }
     numGuesses++;
     console.log(numGuesses)
